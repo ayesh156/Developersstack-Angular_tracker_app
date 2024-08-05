@@ -1,0 +1,55 @@
+<form class="mt-5" [formGroup]="expensesDataForm">
+    <div class="container">
+      <div class="row">
+        <div class="col-3">
+            <mat-form-field class="form-field" appearance="fill">
+              <mat-label>Id</mat-label>
+              <input
+                (keyup.enter)="findData()"
+                formControlName="id"
+                matInput
+                type="text"
+                placeholder="Enter your id"
+              />
+            </mat-form-field>
+          </div>
+        <div class="col-3">
+          <mat-form-field class="form-field" appearance="fill">
+            <mat-label>Title</mat-label>
+            <input
+            [disabled]="true"
+              formControlName="title"
+              matInput
+              type="text"
+              placeholder="Enter your title"
+            />
+          </mat-form-field>
+        </div>
+        <div class="col-3">
+          <mat-form-field class="form-field" appearance="fill">
+            <mat-label>Description</mat-label>
+            <input
+            [disabled]="true"
+              formControlName="description"
+              matInput
+              type="text"
+              placeholder="Enter your description"
+            />
+          </mat-form-field>
+        </div>
+        <div class="col-3">
+          <mat-form-field class="form-field" appearance="fill">
+            <mat-label>Cost</mat-label>
+            <input
+            [disabled]="true"
+              formControlName="cost"
+              matInput
+              type="number"
+              placeholder="Enter your cost"
+            />
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+  </form>
+  

@@ -1,0 +1,63 @@
+<form class="mt-5" [formGroup]="expensesDataForm" (ngSubmit)="update()">
+  <div class="container">
+    <div class="row">
+      <div class="col-3">
+        <mat-form-field class="form-field" appearance="fill">
+          <mat-label>Id</mat-label>
+          <input
+            (keyup.enter)="findData()"
+            formControlName="id"
+            matInput
+            type="text"
+            placeholder="Enter your id"
+          />
+        </mat-form-field>
+      </div>
+      <div class="col-3">
+        <mat-form-field class="form-field" appearance="fill">
+          <mat-label>Title</mat-label>
+          <input
+            formControlName="title"
+            matInput
+            type="text"
+            placeholder="Enter your title"
+          />
+        </mat-form-field>
+      </div>
+      <div class="col-3">
+        <mat-form-field class="form-field" appearance="fill">
+          <mat-label>Description</mat-label>
+          <input
+            formControlName="description"
+            matInput
+            type="text"
+            placeholder="Enter your description"
+          />
+        </mat-form-field>
+      </div>
+      <div class="col-3">
+        <mat-form-field class="form-field" appearance="fill">
+          <mat-label>Cost</mat-label>
+          <input
+            formControlName="cost"
+            matInput
+            type="number"
+            placeholder="Enter your cost"
+          />
+        </mat-form-field>
+      </div>
+      <div class="col-12">
+        <div style="text-align: right; margin-top: 20px">
+          <button
+            mat-raised-button
+            color="primary"
+            type="submit"
+            [disabled]="expensesDataForm?.invalid"
+          >
+            Update Expenses data
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

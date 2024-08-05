@@ -1,0 +1,30 @@
+<form [formGroup]="loginForm" (ngSubmit)="login()">
+<div class="outer">
+    <div class="inner">
+
+        <h4 style="text-align: center;">Login</h4>
+
+        <mat-form-field class="form-field" appearance="fill">
+                <mat-label>Email</mat-label>
+                <input  formControlName="email" matInput type="email" placeholder="Enter your email">
+        </mat-form-field>
+
+        <mat-form-field class="form-field" appearance="fill">
+            <mat-label>Password</mat-label>
+            <input  formControlName="password" matInput type="text" placeholder="Enter your password">
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit" class="submit-login" [disabled]="loginForm?.invalid">Login</button>
+
+        <hr>
+
+        <p class="text">Or Sign in with</p>
+        <div class="social-outer">
+            <button class="btn btn-outline-primary" (click)="loginWithGoogle()">Google</button>
+            <button class="btn btn-outline-primary">FB</button>
+            <button class="btn btn-outline-primary">Git</button>
+            <button class="btn btn-outline-primary" routerLink="/security/signup">Register</button>
+        </div>
+    </div>
+</div>
+</form>

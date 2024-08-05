@@ -1,0 +1,16 @@
+<div style="padding: 10px;">
+    <div class="btn-group">
+        <a routerLink="/dashboard/process/expenses/new" routerLinkActive="active" 
+        [routerLinkActiveOptions]="{ exact: true }" class="btn btn-primary active" aria-current="page">New Expense</a>
+        <a routerLink="/dashboard/process/expenses/find" routerLinkActive="active" 
+        [routerLinkActiveOptions]="{ exact: true }" class="btn btn-primary">Find Expense By Id</a>
+        <a routerLink="/dashboard/process/expenses/update" routerLinkActive="active" 
+        [routerLinkActiveOptions]="{ exact: true }" class="btn btn-primary">Update Expense</a>
+        <a routerLink="/dashboard/process/expenses/list" routerLinkActive="active" 
+        [routerLinkActiveOptions]="{ exact: true }" class="btn btn-primary">Load All Expense</a>
+        <a routerLink="/dashboard/process/expenses/delete" routerLinkActive="active" 
+        [routerLinkActiveOptions]="{ exact: true }" class="btn btn-primary">Delete Expense</a>
+      </div>
+</div>
+<hr>
+<router-outlet></router-outlet>
